@@ -1,0 +1,46 @@
+.navigation {
+    // height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .navigation-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        width: 100%;
+
+        .logo-container {
+            display: flex;
+
+            .nav-link {
+                display: flex;
+                padding: 10px 15px;
+                cursor: pointer;
+                text-decoration: unset;
+
+                .sitlogo{
+                    max-width: 300px;
+                    height: 70px;
+                }
+            }
+        }
+        .link-container {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .nav-link {
+                display: flex;
+                padding: 10px 15px;
+                cursor: pointer;
+                text-decoration: unset;
+                text-transform: uppercase;
+            }
+        }
+    }   
+  }
+  
