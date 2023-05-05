@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Directory from './components/directory/directory.component';
+const App = () => {
 
-function App() {
+  const categories = [
+    {
+      "id": 1,
+      "title": "Curtain",
+      "imgURL": "https://decowindow.in/pub/media/pagecustomization/banner/default/Artboard_8.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Blinds",
+      "imgURL": "https://decowindow.in/media/magiccart/magicslider/s/h/sheer-blind-decowindow.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Garden Torch",
+      "imgURL": "https://decowindow.in/pub/media/pagecustomization/banner/default/Artboard_6.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Cords",
+      "imgURL": "https://decowindow.in//media/catalog/category/Instagram_Post_7_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Rods",
+      "imgURL": "https://decowindow.in//media/catalog/category/Instagram_Post_17_.jpg"
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Directory categories={categories} />
   );
-}
+};
 
 export default App;
