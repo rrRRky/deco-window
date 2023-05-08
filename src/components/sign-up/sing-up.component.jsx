@@ -97,12 +97,12 @@ const SignUpForm = () => {
                     value={confirmPassword} 
                      name="confirmPassword" />
                 </div>
-                <div className="">
+                <div className="button-container">
                     <Button buttonType='default' type="submit">Sign up</Button>
                 </div>
             </form>
     </div>
-  );
+  ); 
 };
 
 export default SignUpForm;
