@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState  } from 'react';
 
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
@@ -20,24 +20,27 @@ const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
+    // setCurrentUser(user);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const {user} = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+      
+      // setCurrentUser(user);
+      // console.log(response);
       resetFormFields();
     } catch (error) {
       switch (error.code) {
@@ -45,7 +48,7 @@ const SignInForm = () => {
           alert('incorrect password for email');
           break;
         case 'auth/user-not-found':
-          alert('no user associated with this email');
+          alert('Email is not register');
           break;
         default:
           console.log(error);
@@ -82,7 +85,7 @@ const SignInForm = () => {
           value={password}
         />
         <div className='buttons-container'>
-          <Button type='submit'>Sign In</Button>
+          <Button type='submit' buttonType='default'>Sign In</Button>
           <Button type='button' buttonType='google' onClick={signInWithGoogle}>
             Google sign in
           </Button>
