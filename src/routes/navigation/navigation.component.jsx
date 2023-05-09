@@ -26,6 +26,9 @@ return (
                 <Link className="nav-link" to='/shop'>
                     shop
                 </Link>
+                <Link className="nav-link" to='/add-shop-product'>
+                    Add Product
+                </Link>
                 <Link className="nav-link" to='/about-us'>
                     About us
                 </Link>
